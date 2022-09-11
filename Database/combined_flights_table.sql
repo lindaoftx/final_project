@@ -14,17 +14,20 @@ INSERT INTO carrier (carrier_code, carrier_name) values ('UA','United Airlines')
 INSERT INTO carrier (carrier_code, carrier_name) values ('B6','Jetblue Airlines');
 
 -- Create airports table
-INSERT INTO airport (airport_code) values ('');
+CREATE TABLE aiports (
+airport_code varchar(20) PRIMARY KEY NOT NULL
+)
 
 -- Create test airport table
 CREATE TABLE destination_airport_test (destination_airport VARCHAR(20));
 
--- Clean duplicate data
+-- Find unique data
 select distinct destination_airport from destination_airport_test
 
--- Check airport data
-select destination_airport, count (destination_airport) from destination_airport_test
-group by destination_airport
+-- Insert data in airports table from destination_airport_test
+INSERT INTO airports 
+SELECT DISTINCT (airport_code) 
+FROM destination_airport_test;
 
 -- Create flights table
 CREATE TABLE flights (
@@ -50,7 +53,7 @@ CREATE UNIQUE INDEX flights_un ON flights (carrier_code, flight_number, destinat
 ALTER TABLE flights
     ADD CONSTRAINT fk_airport_code FOREIGN KEY (destination_airport) REFERENCES airports (airport_code);
 
--- Create staging table to import and test data
+-- Create staging table for flights table to import and test data
 CREATE TABLE air_travel_stage (
                         carrier_code VARCHAR(10) NOT NULL,
                         flight_number INT NOT NULL,
@@ -67,22 +70,19 @@ CREATE TABLE air_travel_stage (
                         delay_national_aviation_system INT,
                         delay_security INT,
                         delay_late_aircraft_arrival INT
+    
+-- Import data from csv file
+-- This was completed via Import/Export UI of PostgresSQL
 
 -- Calculate delay time and test data
 select carriercode, flight_number, actual_departure_time - scheduled_departure_time as delay_time
 from air_travel_stage
-    
-select * from air_travel_stage
-where carriercode = 'UA'
-and flight_number = '225'
-and destination_airport = 'DEN'
-and scheduled_departure_time ='16:15:00'
 
 select carriercode, flight_number, scheduled_departure_time, actual_departure_time
 from air_travel_stage
 where actual_departure_time - scheduled_departure_time > CAST('0:00' AS TIME)
-and carriercode = 'AA'
-and destination_airport = 'LAX'
+-- and carriercode = 'AA'
+-- and destination_airport = 'LAX'
     
 -- During testing, there was a missing airport_destination 'ACY'
 -- Added missing value to table
@@ -115,10 +115,10 @@ ALTER TABLE IF EXISTS public.flights
     
     ALTER TABLE flights
     ADD CONSTRAINT fk_airport_code_departure FOREIGN KEY (departure_from) REFERENCES airports (airport_code);
-
--- Update departure_from column in flights table
-UPDATE flights set departure_from = 'ATL'
-
--- Insert values into departure_from column
+ 
+-- Insert ATL value to airports table
 insert into airports
 values ('ATL')
+
+-- Update departure_from column in flights table to ATL since all flights are orginating from ATL
+UPDATE flights set departure_from = 'ATL'
