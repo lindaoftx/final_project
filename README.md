@@ -31,3 +31,8 @@ Given user-provided variables, will the flight be delayed?
     * Number of daily departures
 4. Do “low cost” airlines have more delays than the “full service” airlines?
 5. Rate of holiday delay vs. normal day delays
+
+## Communication process
+Our team utilized a private Slack channel and Zoom conferences to communicate about the project. We created shared google docs to track all of the components of the project and track deliverables. 
+
+Team roles were delegated based on team members' most and least desired role with the understanding that all team members would be available to collaborate and assist as needed in each role. To streamline GitHub, each part of the project has an assigned "point person" responsible for confirming all code in the branches is production ready, then merging the code into the main branch. 
