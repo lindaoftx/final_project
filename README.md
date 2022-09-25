@@ -48,6 +48,19 @@ The data was then split into training and testing sets through the sklearn.model
 
 We chose to do a logistic regression model since our dataset has a clear binary category, whether a flight is delayed or not delayed. Additionally, the logistic regression model is easy to implement and interpret so this model works best for project purposes. However, this model is sensitive to outliers so if there are many outliers then the results could be incorrect.
 
+### Explanation of changes in model choice from Segment 2, if applicable
+
+There are no changes in model choice from Segment 2.
+
+### Description of how we have trained the model so far
+
+So far, we have trained our model through the default Logistical Regression solver, ‘lbfgs’. While trying to increase our accuracy score, we tried training out model with the solver ‘saga’. There was a slight decrease of 0.01 in our accuracy score when using the ‘saga’ solver, so we decided to stick to the ‘lbfgs’ solver. 
+
+### Description of what training still needs to take place
+
+Due to the class imbalance, some experimental training that could take place would be oversampling, under sampling, or combination sampling the data. 
+
+
 ## Communication process
 Our team utilized a private Slack channel and Zoom conferences to communicate about the project. We created shared google docs to track all of the components of the project and track deliverables. 
 
