@@ -60,6 +60,9 @@ So far, we have trained our model through the default Logistical Regression solv
 
 Due to the class imbalance, some experimental training that could take place would be oversampling, under sampling, or combination sampling the data. 
 
+### Description of current accuracy score
+
+The current accuracy score is 81.43%, meaning that we had 81.43% correct predictions that a flight is or is not delayed.
 
 ## Communication process
 Our team utilized a private Slack channel and Zoom conferences to communicate about the project. We created shared google docs to track all of the components of the project and track deliverables. 
