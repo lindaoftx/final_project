@@ -48,21 +48,25 @@ The data was then split into training and testing sets through the sklearn.model
 
 We chose to do a logistic regression model since our dataset has a clear binary category, whether a flight is delayed or not delayed. Additionally, the logistic regression model is easy to implement and interpret so this model works best for project purposes. However, this model is sensitive to outliers so if there are many outliers then the results could be incorrect.
 
-### Explanation of changes in model choice from Segment 2, if applicable
+### Explanation of changes in model choice from Segment 3, if applicable
 
-There are no changes in model choice from Segment 2.
+There are no changes in model choice from Segment 3.
 
-### Description of how we have trained the model so far
+### Description of how we have trained or re-trained the model so far
 
-So far, we have trained our model through the default Logistical Regression solver, ‘lbfgs’. While trying to increase our accuracy score, we tried training out model with the solver ‘saga’. There was a slight decrease of 0.01 in our accuracy score when using the ‘saga’ solver, so we decided to stick to the ‘lbfgs’ solver. 
+So far, we have trained our model through the default Logistical Regression solver, ‘lbfgs’. While trying to increase our accuracy score, we tried training out model with the solver ‘saga’. There was a slight decrease of 0.01 percent in our accuracy score when using the ‘saga’ solver, so we decided to stick to the ‘lbfgs’ solver. 
 
-### Description of what training still needs to take place
+### Description of model’s confusion matrix
 
-Due to the class imbalance, some experimental training that could take place would be oversampling, under sampling, or combination sampling the data. 
+Our confusion matrix displayed that there are 25,693 true positives, 831 false negatives, 5,253 false positives, 989 true negatives.
 
-### Description of current accuracy score
+### Description of final accuracy score
 
-The current accuracy score is 81.43%, meaning that we had 81.43% correct predictions that a flight is or is not delayed.
+The final accuracy score is 81.43%, meaning that we had 81.43% correct predictions that a flight is or is not delayed.
+
+### Statistical analysis included OR description of how it would be included in future phases of the project
+
+In future phases of the project, I would like to include more features. Including more features such as temperature or precipitation could increase our accuracy score. In addition to including more features, performing a statistical analysis would give us more insight to our data and how we can use our data in this machine learning model or in a different machine learning model. Also, I would remove volume bias by having the model analyze delays per 100 flights. 
 
 ## Communication process
 Our team utilized a private Slack channel and Zoom conferences to communicate about the project. We created shared google docs to track all of the components of the project and track deliverables. 
