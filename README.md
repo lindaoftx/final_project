@@ -1,5 +1,12 @@
 # Outline
 
+## Links
+### Presentation
+https://docs.google.com/presentation/d/17kjivXwMFXJQgs7dRzl26Tbh7RtcLRTaWaJacL4DfT4/
+
+### Interactive Tableau Dashboard
+https://public.tableau.com/app/profile/linda.lemuth/viz/AirlineDelaysDashboard_16637897650290/FlightDelayAnalysis
+
 ## Why was this topic selected? 
 In addition to general interest from all group members on the topic of travel, we chose this topic because it allowed for multiple clear, binary questions to explore with our data analysis. As a group, we believe we will be able to create an accurate model to predict airline delays given the datasets we have found. 
 
@@ -67,14 +74,3 @@ The final accuracy score is 81.43%, meaning that we had 81.43% correct predictio
 ### Statistical analysis included OR description of how it would be included in future phases of the project
 
 In future phases of the project, I would like to include more features. Including more features such as temperature or precipitation could increase our accuracy score. In addition to including more features, performing a statistical analysis would give us more insight to our data and how we can use our data in this machine learning model or in a different machine learning model. Also, I would remove volume bias by having the model analyze delays per 100 flights. 
-
-## Communication process
-Our team utilized a private Slack channel and Zoom conferences to communicate about the project. We created shared google docs to track all of the components of the project and track deliverables. 
-
-Team roles were delegated based on team members' most and least desired role with the understanding that all team members would be available to collaborate and assist as needed in each role. To streamline GitHub, each part of the project has an assigned "point person" responsible for confirming all code in the branches is production ready, then merging the code into the main branch. 
-
-## Links
-### Presentation outline
-https://docs.google.com/presentation/d/17kjivXwMFXJQgs7dRzl26Tbh7RtcLRTaWaJacL4DfT4/
-### Dashboard outline
-https://docs.google.com/presentation/d/1tDWOYBtqa2k2M_G1YcHxqGQKm7RalJ8VYYliaLc1iPg/
